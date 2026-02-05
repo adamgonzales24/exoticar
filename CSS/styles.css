@@ -128,7 +128,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-size: 40px;
-  font-family: sans-serif, bold;
+  font-family: sans-serif;
+  font-weight: bold;
   text-align: center;
 }
 h1 {
@@ -156,7 +157,7 @@ h1 {
 
 .learn-more:hover {
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
-  border: 1px solid red';
+  border: 1px solid red;
 }
 
 /* ------------Articles------------- */
@@ -293,7 +294,128 @@ h2::after {
   display: inline-block;
 }
 
-.social a:hover{
+.social a:hover,
+.social a:focus {
   color: red;
   background: white;
+}
+
+/* Footer links */
+.page-footer a {
+  color: #999999;
+  text-decoration: none;
+}
+
+.page-footer a:hover,
+.page-footer a:focus {
+  color: white;
+}
+
+/* Focus states for accessibility */
+a:focus {
+  outline: 2px solid #ca0500;
+  outline-offset: 2px;
+}
+
+.learn-more:focus {
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  border: 1px solid red;
+}
+
+/* ---------------Responsive Styles------------- */
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 90%;
+    padding: 0 20px;
+  }
+
+  .main-nav li {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .page-header .logo,
+  .page-header .main-nav {
+    float: none;
+    text-align: center;
+  }
+
+  .page-header .logo {
+    padding-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .main-nav li {
+    float: none;
+    display: inline-block;
+    margin: 5px 15px;
+  }
+
+  .banner {
+    padding-top: 180px;
+    height: auto;
+    min-height: 50vh;
+  }
+
+  .banner-block {
+    font-size: 28px;
+    padding: 0 20px;
+  }
+
+  .articles {
+    background: #1b1b1b;
+  }
+
+  article {
+    width: 100%;
+    float: none;
+    padding: 40px 20px;
+  }
+
+  article:first-of-type {
+    padding-right: 20px;
+    background: white;
+  }
+
+  article:last-of-type {
+    padding-left: 20px;
+  }
+
+  .footer-col {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .banner-block {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .quote {
+    font-size: 18px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
 }
